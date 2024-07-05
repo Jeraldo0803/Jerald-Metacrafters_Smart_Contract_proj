@@ -6,7 +6,7 @@ You can use the online Solidity IDE named Remix, you can find it here: https://r
 Make a new file and copy paste the content of the "MySmartContract.sol".
 
 Compile the code, on the left side of the screen, with the icon named `Solidity Compiler`. Compile and then run.
-After that, go to `Deploy & Run Transactions` tab and press `Deploy` on the Contract `MyToken` as named in the run file.
+After that, go to `Deploy & Run Transactions` tab and press `Deploy` on the Contract `DepositWithdrawContract` as named in the run file.
 From there, scroll down and go to `Deployed Contracts`, there should be a dropdown where you can deposit and withdraw values properly.
 
 ### The Code
