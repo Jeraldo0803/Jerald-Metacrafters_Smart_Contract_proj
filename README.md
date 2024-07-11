@@ -52,8 +52,6 @@ contract TransactionContract {
             revert("Invalid withdrawal amount");
         }
 
-        //require(_amount > 0 && _amount <= MAX_TRANSACTION_AMOUNT, "Invalid withdrawal amount");
-
         uint currentDay = _getCurrentDay();
         // Check daily limit
         require(dailyTotals[currentDay] + _amount <= MAX_DAILY_AMOUNT, "The daily withdrawal limit has been reached");
