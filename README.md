@@ -9,7 +9,6 @@
 - After that, go to `Deploy & Run Transactions` tab and press `Deploy` on the Contract `TransactionContract` as named in the run file.
 - From there, scroll down and go to `Deployed Contracts`, here is where you can deposit and withdraw, and also check the MAX_TRANSACTION_AMOUNT and the MAX_DAILY_AMOUNT.
 
-### The Code
 Here is the code snippet of the contract under `TransactionContract.sol`.
 ```
 contract TransactionContract {
@@ -18,7 +17,7 @@ contract TransactionContract {
     // Maximum deposit/withdrawal per transaction
     uint public constant MAX_TRANSACTION_AMOUNT = 1000;
     // Maximum total deposit/withdrawal per day
-    uint public constant MAX_DAILY_AMOUNT = 100000;
+    uint public constant MAX_DAILY_AMOUNT = 10000;
 
     // Store daily totals
     mapping(uint => uint) public dailyTotals;
@@ -64,11 +63,11 @@ contract TransactionContract {
     }
 }
 ```
-There are two functions for this activity `deposit()` and `withdraw()`. Both functions hold 1 parameter which is the unsigned integer for the value.
-The `_getCurrentDay()` uses the Unix block.timestamp.
-`require()` is used to validate the user input, and where the custom error message is defined in the second parameter "Deposit amount must be greater than 0".
-`assert()` is used for checking the if the value is greater than the amount inputted by the user.
-`revert()` is used to revert the function if the total value is less than the amount requested for withdrawal.
+- There are two functions for this activity `deposit()` and `withdraw()`. Both functions hold 1 parameter which is the unsigned integer for the value.
+- The `_getCurrentDay()` uses the Unix block.timestamp.
+- `require()` is used to validate the user input, and where the custom error message is defined in the second parameter "Deposit amount must be greater than 0".
+- `assert()` is used for checking the if the value is greater than the amount inputted by the user.
+- `revert()` is used to revert the function if the total value is less than the amount requested for withdrawal.
 
 ## Author
 Jeraldo0803
